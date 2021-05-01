@@ -6,9 +6,9 @@ rounds = 0
 def gameLoop(gameStatus):
     global score
     global rounds
-    reader = open("7776palavras.txt", encoding="utf8").read().splitlines()
+    reader = open("7776palavras.txt", encoding="utf8").read().splitlines() #dividindo o arquivo .txt em linhas para pegar uma palavra aleatória
     while gameStatus:
-        randomword = random.choice(reader)
+        randomword = random.choice(reader) #pegando uma palavra aleatória
         anagram = list(randomword)
         random.shuffle(anagram)
         resultword = "".join(anagram)
